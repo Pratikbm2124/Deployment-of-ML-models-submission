@@ -5,7 +5,7 @@ recursive-include ./classification_model1/*
 
 include classification_model1/datasets/train.csv
 include classification_model1/datasets/test.csv
-include classification_model1/trained_models/*pkl
+include classification_model1/trained_models/*.pkl
 include classification_model1/version.py
 include classification_model1/config.yml
 
