@@ -3,9 +3,9 @@ from pathlib import Path
 from setuptools import find_packages, setup
 
 # Package meta-data.
-NAME = 'tid-titanic-classification-model'
+NAME = 'tid-titanic-classification-model1'
 DESCRIPTION = 'Example Titanic dataset classification model package'
-URL = ''
+URL = 'https://github.com/Pratikbm2124/Deployment-of-ML-models-submission'
 EMAIL = 'pratikmahavarkar@gmail.com'
 AUTHOR = 'PratikBM'
 REQUIRES_PYTHON = '>=3.7.0'
@@ -15,7 +15,7 @@ long_description = DESCRIPTION
 # Load the package's VERSION file as a dictionary.
 about = {}
 ROOT_DIR = Path(__file__).resolve().parent
-REQUIREMENTS_DIR = ROOT_DIR/'requirements.txt'
+REQUIREMENTS_DIR = ROOT_DIR/'requirements'
 PACKAGE_DIR = ROOT_DIR/'classification_model1'
 with open(PACKAGE_DIR/'VERSION') as f:
     _version = f.read().strip()
@@ -40,7 +40,7 @@ setup(
     python_requires=REQUIRES_PYTHON,
     url=URL,
     packages=find_packages(exclude=("tests",)),
-    package_data={"classification_model": ["VERSION"]},
+    package_data={"classification_model1": ["VERSION"]},
     install_requires=list_reqs(),
     extras_require={},
     include_package_data=True,
