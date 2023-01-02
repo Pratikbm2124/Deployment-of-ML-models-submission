@@ -1,0 +1,54 @@
+# Package Overview
+package_name: classification_model
+
+# Data Files
+raw_data_file: raw.csv
+training_data_file: train.csv
+test_data_file: test.csv
+
+# Variables
+# The variable we are attempting to predict
+target: survived
+
+pipeline_name: classification_model
+pipeline_save_file: classification_model_output_v
+
+features:
+  - pclass
+  - sex
+  - age
+  - sibsp
+  - parch
+  - fare
+  - cabin
+  - embarked
+  - title # generated from name (Mr, Mrs)
+
+# drop variables
+unused_fields:
+  - name
+  - ticket
+  - boat
+  - body
+  - home.dest
+
+# test set size
+test_size: 0.2
+
+# random seed
+random_state: 0
+
+# numerical variables to process
+numerical_vars:
+  - age
+  - fare
+
+# categorical variables to process
+categorical_vars:
+  - sex
+  - cabin
+  - embarked
+  - title
+
+cabin_vars:
+  - cabin
